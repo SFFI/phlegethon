@@ -1,0 +1,46 @@
+{
+    "name": "sffi/phlegethon",
+    "keywords": [
+        "phlegethon",
+        "huohe",
+        "火河",
+        "huohetech"
+    ],
+    "description": "composer",
+    "license": "MIT",
+    "type": "think-extend",
+    "extra": {
+        "think-config": {
+            "phlegethon": "config/phlegethon.php"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ng",
+            "email": "yuyi@cmrpt.com",
+            "homepage": "http://www.vovoqi.com"
+        },
+        {
+            "name": "Coldcgh",
+            "email": "caoganghui@cmrpt.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "composer-plugin-api": "^1.1",
+        "composer/composer": "^1.10",
+        "php": ">=7.2.0",
+        "ext-openssl": "*",
+        "ext-json": "*",
+        "ext-curl": "*"
+    },
+    "suggest": {
+        "topthink/think": ">=v5.1.0",
+        "ext-redis": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "sffi\\phlegethon\\": "src"
+        }
+    }
+}
