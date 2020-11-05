@@ -55,7 +55,9 @@ class Base
     {
         foreach ($this->args as $key => $arg) {
             if (in_array($arg, $this->needEncryption) && !in_array($arg, $this->encrypted)) {
-                $this->param[$arg] = DesCrypt::des_encrypt(isset($arguments[$key])?$arguments[$key]:$this->param[$arg],$this->config['key']);
+                if (isset($arguments[$key]) && !empty($arguments[$key])) {
+                    $this->param[$arg] = DesCrypt::des_encrypt(isset($arguments[$key])?$arguments[$key]:$this->param[$arg],$this->config['key']);
+                }
                 $this->encrypted[] = $arg;
             }
             if (is_array($this->param) && key_exists($arg, $this->param)) {
