@@ -41,7 +41,7 @@ class DesCrypt
     {
         $ivlen = openssl_cipher_iv_length($method);    // 获取密码iv长度
         $iv = openssl_random_pseudo_bytes($ivlen);        // 生成一个伪随机字节串
-        $data = openssl_encrypt(hex2bin($input), $method, $key, $options=OPENSSL_RAW_DATA, $iv);    // 加密
+        $data = openssl_decrypt(hex2bin($input), $method, $key, $options=OPENSSL_RAW_DATA, $iv);    // 加密
         return $data;
     }
 
