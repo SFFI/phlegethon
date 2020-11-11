@@ -54,8 +54,8 @@ class Base
     public function run(...$arguments)
     {
         foreach ($this->args as $key => $arg) {
-            if (in_array($arg, $this->needEncryption) && !in_array($arg, $this->encrypted) || isset($this->param[$arg])) {
-                if (isset($arguments[$key]) && !empty($arguments[$key])) {
+            if (in_array($arg, $this->needEncryption) && !in_array($arg, $this->encrypted)) {
+                if (isset($arguments[$key]) && !empty($arguments[$key]) || isset($this->param[$arg])) {
                     $this->param[$arg] = DesCrypt::des_encrypt(isset($arguments[$key])?$arguments[$key]:$this->param[$arg],$this->config['key']);
                 }
                 $this->encrypted[] = $arg;
