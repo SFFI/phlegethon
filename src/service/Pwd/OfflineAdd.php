@@ -4,7 +4,9 @@
 namespace sffi\phlegethon\service\Pwd;
 
 
-class OfflineAdd extends \sffi\phlegethon\service\Base
+use sffi\phlegethon\service\Base;
+
+class OfflineAdd extends Base
 {
     protected $router = 'pwd/offline_add';
 

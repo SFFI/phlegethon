@@ -26,7 +26,7 @@ use sffi\phlegethon\service\Pwd\ViewFunc;
  * @method ViewFunc view_func($lock_no)
  * @method Add add($lock_no,$pwd_text,$valid_time_start,$valid_time_end,$pwd_user_mobile,$similarity_check='',$pwd_user_name='',$pwd_user_idcard='',$description='',$extra='')
  * @method Update update($lock_no,$pwd_no,$pwd_text,$similarity_check='',$valid_time_start='',$valid_time_end='',$extra='')
- * @method OfflineAdd offline_add($lock_no,$pwd_no,$pwd_text,$similarity_check='',$valid_time_start='',$valid_time_end='',$extra='')
+ * @method OfflineAdd offline_add($lock_no,$valid_time_start,$valid_time_end,$pwd_user_name,$pwd_user_mobile,$pwd_user_idcard='',$description='')
  * @method Delete delete($lock_no,$pwd_no,$extra='')
  * @method Disable disable($lock_no,$pwd_no,$extra='')
  * @method UpdateFunc update_func($lock_no, $pwd_text='', $similarity_check='', $valid_time_start='', $valid_time_end='', $extra='')
