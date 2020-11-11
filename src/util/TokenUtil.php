@@ -18,7 +18,7 @@ class TokenUtil
                 $session = Factory::Login()->Login();
                 cache($key, $session['access_token'], $session['expires_second']);
             }
-            return $session;
+            return is_array($session)? $session['access_token'] : $session;
         } else {
             if (class_exists("\Redis")){
                 $config = ConfigUtil::getConfigFile('redis.php');

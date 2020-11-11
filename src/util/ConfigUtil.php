@@ -10,7 +10,7 @@ class ConfigUtil
     {
         if (is_file( __DIR__.'\..\..\config\phlegethon.php')){
             $config = require __DIR__.'\..\..\config\phlegethon.php';
-            if ($config['config_path']) {
+            if (isset($config['config_path']) && $config['config_path']) {
                 $path =  __DIR__.'\..\..\config\\';
             }
         }
