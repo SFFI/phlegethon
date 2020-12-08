@@ -2,6 +2,7 @@
 
 namespace sffi\phlegethon;
 
+use sffi\phlegethon\Factory\Card;
 use sffi\phlegethon\Factory\Lock;
 use sffi\phlegethon\Factory\Node;
 use sffi\phlegethon\Factory\Login;
@@ -13,6 +14,7 @@ use sffi\phlegethon\Factory\Pwd;
  * @method static Login Login()   登录
  * @method static Lock Lock()   门锁
  * @method static Pwd Pwd()   密码
+ * @method static Card Card()   证卡
  * @package sffi
  */
 class Factory
